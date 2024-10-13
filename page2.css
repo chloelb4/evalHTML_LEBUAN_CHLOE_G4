@@ -1,0 +1,138 @@
+/* réinitialisation des marges et bordures */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Structure du body */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #979797;
+    color: white;
+}
+
+/* Header et footer en pleine largeur */
+header {
+    width: 100%;
+    background-color: #394B59;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between; /* Logo à gauche, navigation à droite */
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    background-color: #394B59;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Ajustement pour éviter le chevauchement du footer */
+.content-container {
+    padding-bottom: 80px; /* Ajoute un espace en bas pour éviter le chevauchement avec le footer */
+}
+
+.logo {
+    width: 80px;
+}
+
+nav {
+    width: 200px;
+    height: 40px;
+    background-color: #556577;
+    text-align: center;
+    line-height: 40px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    padding-inline: 13px;
+}
+
+a {
+    color: white;
+    text-decoration: none; 
+}
+
+/* Section principale avec grille contenant deux groupes et une colonne vide centrale */
+.grid-section {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr; /* deux colonnes pour les groupes et une colonne vide centrale */
+    padding: 20px;
+    background-color: #DFDFDF;
+    border-radius: 5px;
+    column-gap: 60px; /* espace central */
+    flex: 1;
+}
+
+/* Titre pour chaque section (gauche et droite) */
+.section-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #394B59;
+    margin-bottom: 15px;
+    text-align: center;
+    background-color: #B0B0B0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Chaque groupe d’images en grille de deux colonnes */
+.grid-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes par groupe */
+    gap: 20px; /* Espace entre les images dans chaque groupe */
+}
+
+/* Style pour chaque image et titre */
+.grid-item {
+    text-align: center;
+    background-color: #CCCCCC;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.grid-item h3 {
+    font-size: 10px;
+    background-color: #B0B0B0;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+/* Footer aligné avec texte et icônes */
+.footer-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-icons img {
+    width: 40px;
+    background-color: #556577;
+    padding: 5px;
+    border-radius: 3px;
+}

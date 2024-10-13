@@ -1,0 +1,192 @@
+/* styles généraux que j'ai appliqués à l'ensemble de la page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Structure du body et HTML */
+html, body {
+    height: 100%; /* assure que le body occupe toute la hauteur de la page */
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c4c4c4;
+    color: white;
+}
+
+/* Style pour que le header et le footer soient en pleine largeur */
+header, footer {
+    width: 100%; /* prend toute la largeur de la page */
+    background-color: #394B59;
+    padding: 20px; /* Espacement intérieur */
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Espace entre le logo et la navigation */
+    align-items: center; /* centre verticalement les éléments */
+    border-bottom: 5px solid #2F4F4F; /* espace de délimitation sous le header */
+    margin-bottom: 40px; /* Grand espace sous le header */
+}
+
+header .logo {
+    width: 80px;
+    height: auto; /* Hauteur automatique pour garder les bonnes proportions */
+}
+
+nav {
+    width: 200px;
+    height: 40px;
+    background-color: #556577;
+    text-align: center;
+    line-height: 40px; /* aligne le texte verticalement */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    padding-inline: 13px;
+}
+
+a {
+    color: white;
+    text-decoration: none; 
+}
+
+/* conteneur principal centré et élargi */
+.content-container {
+    width: 90%;
+    margin: 0 auto; /* Centre le conteneur horizontalement */
+    padding: 0 20px; /* espacement latéral */
+    flex: 1; /* Prend l'espace vertical restant pour repousser le footer en bas */
+}
+
+/* Style pour la bannière */
+.banner {
+    background-color: #394B59;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 15px; /* coins arrondis */
+}
+
+.banner h1 {
+    font-size: 30px; /* Taille du titre */
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 13px; /
+}
+
+/* Section de contenu principale en grille */
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    grid-template-rows: auto auto; /* deux lignes pour organiser le contenu */
+    gap: 20px;
+    padding: 20px;
+    background-color: #DFDFDF;
+    border-radius: 5px;
+}
+
+/* Style de l'image principale située à gauche */
+.img-left img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Remplit le conteneur */
+    border-radius: 5px;
+}
+
+/* Bloc de texte central aligné à gauche et de taille égale */
+.center-text, .bottom-left {
+    background-color: #CCCCCC;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* aligne le contenu sur le côté gauche */
+    text-align: left; /* aligne le texte à gauche */
+    height: 150px; /* Hauteur fixe pour garder une taille identique */
+}
+
+/* pour les différentes positions spécifiques dans la grille */
+.center-text {
+    grid-column: 2 / 3; /* Position dans la grille */
+    grid-row: 1 / 2;
+}
+
+.bottom-left {
+    grid-column: 1 / 2; /* Position dans la grille */
+    grid-row: 2 / 3;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.center-text h3, .bottom-left h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.center-text p, .bottom-left p {
+    margin-bottom: 10px;
+}
+
+/* Style de l'image secondaire située à droite */
+.img-right img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    grid-column: 2 / 3; /* position dans la grille */
+    grid-row: 2 / 3;
+}
+
+/* Style des boutons */
+button {
+    width: 150px;
+    padding: 10px 0; /* Espacement vertical interne */
+    background-color: #556577;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer; /* Change le curseur lors du survol */
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase; /* met en majuscules le texte */
+    text-align: center;
+    margin-top: 10px; /* espace au-dessus du bouton */
+}
+
+/* Ajustement du footer pour qu'il reste en bas */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-icons img {
+    width: 40px;
+    height: auto;
+    background-color: #556577; /* Couleur de fond pour chaque icône */
+    padding: 5px;
+    border-radius: 3px;
+}
